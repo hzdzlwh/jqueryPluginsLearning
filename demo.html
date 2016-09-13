@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="maxHeight.js"></script>
+	<script type="text/javascript" src="lockDimensions.js"></script>
+	<script type="text/javascript" src="tooltip.js"></script>
+<script type="text/javascript">
+$(function(){
+	alert($('div').maxHeight());
+	$('div').eq(0).lockDimensions('width').css('background','yellow');
+
+	$('div').tooltip();   //调用init方法
+	$('div').tooltip({     //调用init方法 
+	  foo : 'bar'
+	});
+	$('div').tooltip('hide'); // 调用 hide 方法
+	$('div').tooltip('update', 'This is the new tooltip content!'); // 调用 update 方法
+
+
+});
+	
+</script>
+</head>
+<body>
+<div style="height:100px;border:1px solid #ccc;"></div>
+<div style="height:50px;border:1px solid #ccc;"></div>
+<div style="height:300px;border:1px solid #ccc;"></div>
+</body>
+</html>
